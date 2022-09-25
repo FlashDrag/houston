@@ -1,0 +1,92 @@
+body {
+  /* фон всей страницы */
+  background-color: rgba(247, 247, 247, 0.699);
+}
+
+#wraper {
+  /* ширина главного блока */
+  width: 70%;
+  /* margin растягивет внешние нижние и верхн. границы блока
+	и центрирует `auto` страницу горизонтально*/
+  margin: -1em auto;
+  padding: 1em 1em; /* внутренние отступы текста от края блока */
+  background-color: rgb(255, 255, 255); /* фон блока */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: sans-serif; /* шрифт без засечек*/
+  /* правило внутреннего и внешнего: */
+  margin-top: 1.5em; /* -верхний отступ больше нижнего */
+  letter-spacing: 1.2px; /* -межсимвольный интервал*/
+}
+
+h2 {
+  margin-bottom: -8px; /*уменьшено расстояние между низом h2 и верхом h3 */
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: 1.6px;
+}
+
+/* адапатация таблицы для горизонтальной прокрутки без прокрутки самой страницы */
+.weather-table {
+  display: block;
+  /* width: 100%; */
+  overflow: auto;
+  border: solid 0px;
+}
+
+/* таблица `Крупнейшие компании...` */
+.economy-table {
+  width: 100%; /*по ширине страницы*/
+}
+
+.economy-table tbody {
+  text-align: center; /*центровка текста во всех ячейках таблицы*/
+}
+
+.economy-table tbody tr td:first-child,
+td:last-child {
+  /*текст в крайнем левом и крайнем правом столбце тела таблицы выравнивает по левому краю*/
+  text-align: left;
+}
+
+figure {
+  float: right; /* Блоки выстраиваются по горизонтали */
+  width: 12em; /* Ширина блока, решает проблему с выходящим за пределы картинки текстом */
+}
+
+figcaption {
+  font-style: italic; /* подписи под картинками выполены курсивом*/
+}
+
+#houston-portrait {
+  margin-top: -5px;
+  height: 14.7em;
+}
+
+@media screen and (min-width: 1650px) {
+  #houston-portrait {
+    margin-top: -2.5em;
+    height: 14.3em;
+  }
+}
+
+/* адаптация под разные екраны */
+@media screen and (max-width: 768px) {
+  #wraper {
+    width: 93%;
+    margin: -2em auto;
+    padding: 1em 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  figure {
+    float: none;
+  }
+}
